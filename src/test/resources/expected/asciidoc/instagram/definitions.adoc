@@ -1,0 +1,225 @@
+
+[[_definitions]]
+== Definitions
+
+[[_comment]]
+=== Comment
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**created_time** +
+__optional__|string
+|**from** +
+__optional__|<<_miniprofile,MiniProfile>>
+|**id** +
+__optional__|string
+|**text** +
+__optional__|string
+|===
+
+
+[[_image]]
+=== Image
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**height** +
+__optional__|integer
+|**url** +
+__optional__|string
+|**width** +
+__optional__|integer
+|===
+
+
+[[_like]]
+=== Like
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**first_name** +
+__optional__|string
+|**id** +
+__optional__|string
+|**last_name** +
+__optional__|string
+|**type** +
+__optional__|string
+|**user_name** +
+__optional__|string
+|===
+
+
+[[_location]]
+=== Location
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**id** +
+__optional__|string
+|**latitude** +
+__optional__|number
+|**longitude** +
+__optional__|number
+|**name** +
+__optional__|string
+|===
+
+
+[[_media]]
+=== Media
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|**comments:** +
+__optional__||<<_media_comments,comments:>>
+|**created_time** +
+__optional__|Epoc time (ms)|integer
+|**filter** +
+__optional__||string
+|**id** +
+__optional__||integer
+|**images** +
+__optional__||<<_media_images,images>>
+|**likes** +
+__optional__||<<_media_likes,likes>>
+|**location** +
+__optional__||<<_location,Location>>
+|**tags** +
+__optional__||< <<_tag,Tag>> > array
+|**type** +
+__optional__||string
+|**user** +
+__optional__||<<_miniprofile,MiniProfile>>
+|**users_in_photo** +
+__optional__||< <<_miniprofile,MiniProfile>> > array
+|**videos** +
+__optional__||<<_media_videos,videos>>
+|===
+
+[[_media_comments]]
+**comments:**
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**count** +
+__optional__|integer
+|**data** +
+__optional__|< <<_comment,Comment>> > array
+|===
+
+[[_media_images]]
+**images**
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**low_resolution** +
+__optional__|<<_image,Image>>
+|**standard_resolution** +
+__optional__|<<_image,Image>>
+|**thumbnail** +
+__optional__|<<_image,Image>>
+|===
+
+[[_media_likes]]
+**likes**
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**count** +
+__optional__|integer
+|**data** +
+__optional__|< <<_miniprofile,MiniProfile>> > array
+|===
+
+[[_media_videos]]
+**videos**
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**low_resolution** +
+__optional__|<<_image,Image>>
+|**standard_resolution** +
+__optional__|<<_image,Image>>
+|===
+
+
+[[_miniprofile]]
+=== MiniProfile
+A shorter version of User for likes array
+
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**full_name** +
+__optional__|string
+|**id** +
+__optional__|integer
+|**profile_picture** +
+__optional__|string
+|**user_name** +
+__optional__|string
+|===
+
+
+[[_tag]]
+=== Tag
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**media_count** +
+__optional__|integer
+|**name** +
+__optional__|string
+|===
+
+
+[[_user]]
+=== User
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**bio** +
+__optional__|string
+|**counts** +
+__optional__|<<_user_counts,counts>>
+|**full_name** +
+__optional__|string
+|**id** +
+__optional__|integer
+|**profile_picture** +
+__optional__|string
+|**username** +
+__optional__|string
+|**website** +
+__optional__|string
+|===
+
+[[_user_counts]]
+**counts**
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**follows** +
+__optional__|integer
+|**follwed_by** +
+__optional__|integer
+|**media** +
+__optional__|integer
+|===
+
+
+

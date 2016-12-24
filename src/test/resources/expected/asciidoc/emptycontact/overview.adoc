@@ -1,0 +1,12 @@
+= Empty Contact
+
+
+[[_overview]]
+== Overview
+
+=== Version information
+[%hardbreaks]
+__Version__ : 1.0
+
+
+

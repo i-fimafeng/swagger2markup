@@ -1,0 +1,211 @@
+
+[[_paths]]
+== Paths
+
+[[_c_param_intparam_get]]
+=== GET /C/{param}/{intParam}
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**intParam** +
+__required__|test integer in path|integer(test)
+|**Path**|**param** +
+__required__|test string in path|string(test)
+|**Query**|**intQuery** +
+__required__|test integer in query|integer(test)
+|**Query**|**stringQuery** +
+__required__|test string in query|string(test)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Result|string(test)
+|**201**|Result|<<_c_param_intparam_get_response_201,Response 201>>
+|**202**|Result|<<_c_param_intparam_get_response_202,Response 202>>
+|**203**|Result|integer(test)
+|**204**|Result|<<_c_param_intparam_get_response_204,Response 204>>
+|**205**|Result|<<_c_param_intparam_get_response_205,Response 205>>
+|===
+
+[[_c_param_intparam_get_response_201]]
+**Response 201**
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**test** +
+__optional__|string(test)
+|===
+
+[[_c_param_intparam_get_response_202]]
+**Response 202**
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**test** +
+__optional__|< string(test) > array
+|===
+
+[[_c_param_intparam_get_response_204]]
+**Response 204**
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**test** +
+__optional__|integer(test)
+|===
+
+[[_c_param_intparam_get_response_205]]
+**Response 205**
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**test** +
+__optional__|< integer(test) > array
+|===
+
+
+==== Tags
+
+* All
+
+
+[[_integerarray_get]]
+=== GET /integerArray
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**body** +
+__required__|test integer str in body|< integer(test) > array
+|===
+
+
+==== Tags
+
+* All
+
+
+[[_integerobj_get]]
+=== GET /integerObj
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**body** +
+__required__|test integer str in body|<<_integerobj_get_body,body>>
+|===
+
+[[_integerobj_get_body]]
+**body**
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**test** +
+__optional__|integer(test)
+|===
+
+
+==== Tags
+
+* All
+
+
+[[_integerstr_get]]
+=== GET /integerStr
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**body** +
+__required__|test integer str in body|integer(test)
+|===
+
+
+==== Tags
+
+* All
+
+
+[[_stringarray_get]]
+=== GET /stringArray
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**body** +
+__required__|test string str in body|< string(test) > array
+|===
+
+
+==== Tags
+
+* All
+
+
+[[_stringobj_get]]
+=== GET /stringObj
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**body** +
+__required__|test string str in body|<<_stringobj_get_body,body>>
+|===
+
+[[_stringobj_get_body]]
+**body**
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**test** +
+__optional__|string(test)
+|===
+
+
+==== Tags
+
+* All
+
+
+[[_stringstr_get]]
+=== GET /stringStr
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**body** +
+__required__|test string str in body|string(test)
+|===
+
+
+==== Tags
+
+* All
+
+
+

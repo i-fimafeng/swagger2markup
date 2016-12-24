@@ -1,0 +1,269 @@
+
+[[_definitions]]
+== Definitions
+
+[[_error]]
+=== Error
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|**error-code** +
+__optional__|Error code|integer
+|**message** +
+__optional__|Error message|string
+|===
+
+
+[[_inlinedepthschema]]
+=== InlineDepthSchema
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**Loop** +
+__optional__|<<_inlinedepthschema_loop,Loop>>
+|===
+
+[[_inlinedepthschema_loop]]
+**Loop**
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|**p1** +
+__optional__|Description p1|string
+|**p2** +
+__optional__|Description p2|<<_inlinedepthschema_p2,p2>>
+|===
+
+[[_inlinedepthschema_p2]]
+**p2**
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|**p2-1** +
+__optional__|Description p2-1|string
+|**p2-2** +
+__optional__|Description p2-2|<<_inlinedepthschema_p2_p2-2,p2-2>>
+|===
+
+[[_inlinedepthschema_p2_p2-2]]
+**p2-2**
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|**p2-2-1** +
+__optional__|Description p2-2-1|<<_inlinedepthschema_p2_p2-2_p2-2-1,p2-2-1>>
+|**p2-2-2** +
+__optional__|Description p2-2-2|<<_inlinedepthschema_p2_p2-2_p2-2-2,p2-2-2>>
+|===
+
+[[_inlinedepthschema_p2_p2-2_p2-2-1]]
+**p2-2-1**
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|**p2-2-1-1** +
+__optional__|Description p2-2-1-1|string
+|**p2-2-1-2** +
+__optional__|Description p2-2-1-2|boolean
+|===
+
+[[_inlinedepthschema_p2_p2-2_p2-2-2]]
+**p2-2-2**
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|**p2-2-2-1** +
+__optional__|Description p2-2-2-1|string
+|**p2-2-2-2** +
+__optional__|Description p2-2-2-2|boolean
+|===
+
+
+[[_inlinepet]]
+=== InlinePet
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**category** +
+__optional__|<<_inlinepet_category,category>>
+|**id** +
+__required__|integer(int64)
+|**tags** +
+__optional__|< <<_inlinepet_tags,tags>> > array
+|===
+
+[[_inlinepet_category]]
+**category**
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**id** +
+__optional__|integer(int64)
+|**name** +
+__optional__|string
+|===
+
+[[_inlinepet_tags]]
+**tags**
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**id** +
+__optional__|integer(int64)
+|**name** +
+__optional__|string
+|===
+
+
+[[_inlinetitlepet]]
+=== InlineTitlePet
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**category** +
+__optional__|<<_categorymodel,CategoryModel>>
+|**id** +
+__required__|integer(int64)
+|**tags** +
+__optional__|< <<_tagmodel,TagModel>> > array
+|===
+
+[[_categorymodel]]
+**CategoryModel**
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**id** +
+__optional__|integer(int64)
+|**name** +
+__optional__|string
+|===
+
+[[_tagmodel]]
+**TagModel**
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**id** +
+__optional__|integer(int64)
+|**name** +
+__optional__|string
+|===
+
+
+[[_location]]
+=== Location
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|**Place** +
+__optional__|Place|string
+|===
+
+
+[[_mixedschema]]
+=== MixedSchema
+mixed collections and objects
+
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**myTable** +
+__optional__|< <<_mixedschema_mytable,myTable>> > array
+|===
+
+[[_mixedschema_mytable]]
+**myTable**
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**myDict** +
+__optional__|< string, <<_mixedschema_mydict,myDict>> > map
+|===
+
+[[_mixedschema_mydict]]
+**myDict**
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**k** +
+__optional__|string
+|**v** +
+__optional__|string
+|===
+
+
+[[_recursivecollectionschema]]
+=== RecursiveCollectionSchema
+Options k/v pairs list
+
+__Type__ : < < string, <<_recursivecollectionschema_inline,RecursiveCollectionSchema>> > map > array
+
+[[_recursivecollectionschema_inline]]
+**RecursiveCollectionSchema**
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|**key** +
+__optional__|option key|string
+|**value** +
+__optional__|option value|string
+|===
+
+
+[[_titledschema]]
+=== TitledSchema
+mixed collections and objects
+
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**myTable** +
+__optional__|< <<_tablecontent,TableContent>> > array
+|===
+
+[[_tablecontent]]
+**TableContent**
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**emptyObject** +
+__optional__|object
+|**myDict** +
+__optional__|< string, <<_kvpair,KVPair>> > map
+|===
+
+[[_kvpair]]
+**KVPair**
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**k** +
+__optional__|string
+|**v** +
+__optional__|string
+|===
+
+
+

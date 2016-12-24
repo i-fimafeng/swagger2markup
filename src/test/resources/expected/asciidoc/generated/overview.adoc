@@ -1,0 +1,19 @@
+= Test - Should contain URI scheme
+
+
+[[_overview]]
+== Overview
+
+=== Version information
+[%hardbreaks]
+__Version__ : 0.0.0
+
+
+=== URI scheme
+[%hardbreaks]
+__Host__ : localhost
+__BasePath__ : /api
+__Schemes__ : HTTP, HTTPS
+
+
+

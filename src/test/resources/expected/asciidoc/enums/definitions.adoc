@@ -1,0 +1,19 @@
+
+[[_definitions]]
+== Definitions
+
+[[_enumstring]]
+=== EnumString
+Enum string
+
+__Type__ : enum (ADDED, REMOVED, CHANGED)
+
+
+[[_simplestring]]
+=== SimpleString
+Simple string
+
+__Type__ : string
+
+
+

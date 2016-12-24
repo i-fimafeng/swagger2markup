@@ -1,0 +1,19 @@
+
+[[_category]]
+=== Category
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*id* +
+_optional_||integer(int64)
+|*name* +
+_optional_|The name of the category +
+*Default* : `"DefaultCategory"` +
+*Length* : `0 - 255` +
+*Pattern* : `"[A-Za-zäöüÄÖÜß]{0,255}"` +
+*Example* : `"FoobarCategory"`|string
+|===
+
+
+

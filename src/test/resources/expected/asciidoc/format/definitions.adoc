@@ -1,0 +1,47 @@
+
+[[_definitions]]
+== Definitions
+
+[[_integerarray]]
+=== IntegerArray
+__Type__ : < integer(test) > array
+
+
+[[_integerobj]]
+=== IntegerObj
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**test** +
+__optional__|integer(test)
+|===
+
+
+[[_integerstr]]
+=== IntegerStr
+__Type__ : integer(test)
+
+
+[[_stringarray]]
+=== StringArray
+__Type__ : < string(test) > array
+
+
+[[_stringobj]]
+=== StringObj
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**test** +
+__optional__|string(test)
+|===
+
+
+[[_stringstr]]
+=== StringStr
+__Type__ : string(test)
+
+
+

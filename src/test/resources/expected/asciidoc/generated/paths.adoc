@@ -1,0 +1,17 @@
+
+[[_paths]]
+== Paths
+
+[[_test_get]]
+=== GET /test
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|string
+|===
+
+
+

@@ -1,0 +1,57 @@
+
+[[_paths]]
+== Paths
+
+[[_createstate]]
+=== Create state
+....
+POST /state
+....
+
+
+==== Description
+Return state
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**oldState** +
+__required__|Old State as raw string|enum (ADDED, REMOVED, CHANGED)
+|**Body**|**StateModel** +
+__optional__|State as enum in object|<<_createstate_statemodel,StateModel>>
+|===
+
+[[_createstate_statemodel]]
+**StateModel**
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|**value** +
+__optional__|State value|enum (ADDED, REMOVED, CHANGED)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|enum (ADDED, REMOVED, CHANGED)
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+
